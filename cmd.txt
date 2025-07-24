@@ -1,0 +1,18 @@
+✅ Updated Docker Run Command
+bash
+Copy
+Edit
+docker run -p 8888:8888 -p 8501:8501 -v E:\udaan\dockerV:/home/jovyan/work jupyter-torch-cu122
+Then, once you're inside the container (as jovyan), run your app like this:
+
+bash
+Copy
+Edit
+cd ~/work
+streamlit run app.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false
+🌐 Now Open This in Your Browser
+arduino
+Copy
+Edit
+http://localhost:8501
+✅ This should work now on your host system, because the port is published.
